@@ -8,16 +8,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link @if (Route::is('home')) active @endif " aria-current="page"
+                        href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('movies') }}">Movies</a>
+                    <a class="nav-link @if (Route::is('movies')) active @endif"
+                        href="{{ route('movies') }}">Movies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contatti</a>
+                    <a class="nav-link @if (Route::is('contacts')) active @endif" href="#">Contatti</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Chi siamo</a>
+                    <a class="nav-link @if (Route::is('about')) active @endif" href="#">Chi siamo</a>
                 </li>
             </ul>
         </div>
