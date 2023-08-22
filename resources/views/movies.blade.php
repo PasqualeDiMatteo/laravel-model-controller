@@ -4,6 +4,7 @@
 
 @section('main')
     <div class="container mt-5">
+        <h1 class="mb-3">Movies</h1>
         @include('includes.movie.card')
     </div>
 @endsection
